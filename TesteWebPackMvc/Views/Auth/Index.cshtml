@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "/Views/Shared/_LayoutEmpty.cshtml";
+}
+
+<div style="height: 100vh; width: 100%; display: flex; justify-content: center; align-items: center;">
+    <div style="width: 550px; padding: 30px; border: 2px solid #dbdbdb; border-radius: 6px;">
+        <h3>Entre com e-mail e senha</h3>
+        <br />
+        <form id="formLogin" >
+            <div class="mb-3">
+                <label for="txtEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="txtEmail" placeholder="name@example.com">
+            </div>
+
+            <div class="mb-3">
+                <label for="txtUsername" class="form-label">Username</label>
+                <input type="text" class="form-control" id="txtUsername" placeholder="username">
+            </div>
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary" id="btnLogin">Entrar</button>
+            </div>
+        </form>
+        <pre id="preResult"></pre>
+    </div>
+</div>
+
+

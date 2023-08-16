@@ -28,4 +28,4 @@ Abra 3 terminais na pasta do projeto MVC e execute os seguintes comandos:
 - Todos os arquivos (módulos) que não estão importados em outros arquivos Typescript, deverão ser importados no entrypoint TS do projeto, que é o arquivo "src/index.ts" para que o webpack possa compilar.
 
 
-  Espero que ajude.
+Espero que ajude.

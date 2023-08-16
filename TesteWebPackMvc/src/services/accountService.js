@@ -22,8 +22,8 @@ exports.getUsers = getUsers;
 const getUser = (email, username) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     const response = yield axios_1.default.get(`https://jsonplaceholder.typicode.com/users?email=${email}`);
-    if (((_a = response.data) === null || _a === void 0 ? void 0 : _a.username) == username) {
-        return response.data;
+    if (((_a = response.data[0]) === null || _a === void 0 ? void 0 : _a.username) == username) {
+        return response.data[0];
     }
     else {
         return null;

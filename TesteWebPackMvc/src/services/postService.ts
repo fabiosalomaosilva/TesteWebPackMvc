@@ -1,9 +1,15 @@
 import axios from 'axios';
 import { Post } from '../models/Post';
+import { User } from '../models/User';
 
-export const getPosts = async (): Promise<Post[]> => {
-    const response = await axios.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
-    return response.data;
+export const getPosts = async (): Promise<Post[] | null> => {
+    const localStorageData = localStorage.getItem('user');
+    if (localStorageData !== null) {
+        const currentuser = JSON.parse(localStorageData) as User;
+        const response = await axios.get<Post[]>('https://jsonplaceholder.typicode.com/users/' + currentuser.id + '/posts');
+        return response.data;
+    }
+    return null;
 };
 
 

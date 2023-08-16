@@ -7,23 +7,28 @@
     <div style="width: 550px; padding: 30px; border: 2px solid #dbdbdb; border-radius: 6px;">
         <h3>Entre com e-mail e senha</h3>
         <br />
-        <form id="formLogin" >
+        <form id="formLogin">
             <div class="mb-3">
-                <label for="txtEmail" class="form-label">Email</label>
-                <input type="email" class="form-control" id="txtEmail" placeholder="name@example.com">
-                <div id="emailValidation" class="invalid-feedback" />
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+            <div id="emailValidation" style="font-size: 0.8rem; color: red; margin-left: 5px;"></div>
             </div>
 
             <div class="mb-3">
-                <label for="txtUsername" class="form-label">Username</label>
-                <input type="text" class="form-control" id="txtUsername" placeholder="username">
-                <div id="usernameValidation" class="invalid-feedback" />
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="username">
+                <div id="usernameValidation" style="font-size: 0.8rem; color: red; margin-left: 5px;"></div>
             </div>
-            <div class="d-grid gap-2 mt-2">
-                <button type="submit" class="btn btn-primary" id="btnLogin">Entrar</button>
+            <div class="d-grid gap-2 mt-4">
+                <button type="submit" class="btn btn-primary" id="btnLogin"> <span id="spinner" aria-hidden="true"></span>Entrar</button>
+            </div>
+            <div class="d-grid gap-2 mt-4">
+                <a class="btn btn-outline-secondary" href="/">Cancelar</a>
             </div>
         </form>
         <pre id="preResult"></pre>
+        
+
     </div>
 </div>
 

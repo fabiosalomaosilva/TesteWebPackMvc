@@ -45,6 +45,7 @@ const putPost = (id, post) => __awaiter(void 0, void 0, void 0, function* () {
 });
 exports.putPost = putPost;
 const deletePost = (id) => __awaiter(void 0, void 0, void 0, function* () {
-    const response = yield api_1.default.delete(`/posts/{id}`);
+    const response = yield api_1.default.delete(`/posts/${id}`);
+    return response.data;
 });
 exports.deletePost = deletePost;

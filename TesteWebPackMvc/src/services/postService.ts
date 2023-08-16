@@ -31,11 +31,9 @@ export const postPost = async (post: Post): Promise<Post | null> => {
 export const putPost = async (id: number, post: Post): Promise<Post | null> => {
     const response = await api.patch<Post>(`/posts/${id}`, post);
     return response.data;
-   
+
 };
 
 export const deletePost = async (id: number) => {
-    const response = await api.delete(`/posts/${id}`);
-    return response.data;
-    
+    const resp = await api.delete(`/posts/${id}`);
 };

@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
+    "dev-watch": "webpack --mode development --watch",
     "api": "json-server --watch wwwroot/data/db.json --port 3001"
   },
   "keywords": [],

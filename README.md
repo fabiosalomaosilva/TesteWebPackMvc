@@ -7,8 +7,8 @@ POC de aplicação construída em Asp.Net MVC Core 6.0 com Typescrpt, Node.js, M
 
 Após clonar a aplicação. entrar na pasta do projeto MVC, abra o terminal e execute os seguintes comandos:
 
-    - npm install
-    - npm run api
+    $ npm install
+    $ npm run api
 
 Utilize o Visual Studio para executar normalmente sua aplicação.
 
@@ -17,6 +17,6 @@ Utilize o Visual Studio para executar normalmente sua aplicação.
 
 Abra 3 terminais na pasta do projeto MVC e execute os seguintes comandos:
 
-    - npm run api (caso ainda não tenha executado no passo anterior)
-    - npm run dev-watch
-    - dotnet run
+    $ npm run api (caso ainda não tenha executado no passo anterior)
+    $ npm run dev-watch
+    $ dotnet run

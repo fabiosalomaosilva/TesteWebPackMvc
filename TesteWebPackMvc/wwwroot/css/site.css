@@ -27,6 +27,21 @@ body {
     margin: 0;
 }
 
+.feed-title {
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
 .cssload-spin-box {
     position: absolute;
     margin: auto;

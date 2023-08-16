@@ -12,7 +12,7 @@ const body = document.getElementById('body') as HTMLTextAreaElement;
 let currentuser: User | null = null;
 const localStorageData = localStorage.getItem('user');
 
-document.addEventListener('DOMContentLoaded', async function  () {
+document.addEventListener('DOMContentLoaded', async function () {
     if (window.location.pathname.toLocaleLowerCase() === '/posts') {
         if (localStorageData !== null) {
             currentuser = JSON.parse(localStorageData) as User;
@@ -63,11 +63,15 @@ const ListarPosts = async () => {
             li.innerHTML = `
             <div class="card w-100 mb-4">
               <div class="card-body">
-              <h4>${post.title}</h4>
-              <div class="d-flex justify-content-start">
-                <img src="https://i.pinimg.com/736x/3e/aa/24/3eaa245d923949b6f662b8ba07b7a3b2.jpg" class="img-thumbnail" style="border-radius:50%; width: 25px;height:25px;margin-right:10px;" alt="...">
-                <p>${currentuser?.name}</p>
-              </div>
+                <div class="d-flex justify-content-start align-items-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1395/1395476.png" class="feed-title" alt="...">
+                    <h4>${post.title}</h4>
+                </div>
+
+                <div class="d-flex justify-content-start align-items-center mx-3">
+                    <img src="https://i.pinimg.com/736x/3e/aa/24/3eaa245d923949b6f662b8ba07b7a3b2.jpg" class="avatar" alt="...">
+                    <span>${currentuser?.name}</span>
+                </div>
               <br />
                 <p>${post.body}</p>
               </div>

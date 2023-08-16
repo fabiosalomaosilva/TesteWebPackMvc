@@ -11,7 +11,7 @@ Utilize o Visual Studio para executar normalmente sua aplicação.
 
 # Se você quer usar o VS Code, siga os seguintes passos:
 
-    - Abra 3 terminais e execute os seguintes comando
+Abra 3 terminais e execute os seguintes comando
     - npm run api (caso ainda não tenha executado no passo anterior)
     - npm run dev-watch
     - dotnet run

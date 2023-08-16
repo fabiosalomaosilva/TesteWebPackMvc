@@ -20,3 +20,12 @@ Abra 3 terminais na pasta do projeto MVC e execute os seguintes comandos:
     $ npm run api (caso ainda não tenha executado no passo anterior)
     $ npm run dev-watch
     $ dotnet run
+
+# Desenvolvimento
+
+- A estrutura de arquivos Typescript está localizada dentro da pasta src. E todos os novos arquivos que serão criados deverão estar nesta pasta.
+
+- Todos os arquivos (módulos) que não estão importados em outros arquivos Typescript, deverão ser importados no entrypoint TS do projeto, que é o arquivo "src/index.ts" para que o webpack possa compilar.
+
+
+  Espero que ajude.

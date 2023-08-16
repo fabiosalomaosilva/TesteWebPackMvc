@@ -1,5 +1,4 @@
 import { z } from 'zod';
-import { icons } from 'feather-icons'
 import { User } from '../models/User';
 import { deletePost, getPosts, postPost, putPost } from '../services/postService';
 import { Post } from '../models/Post';

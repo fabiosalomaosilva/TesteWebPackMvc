@@ -13,14 +13,19 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deletePost = exports.putPost = exports.postPost = exports.getPost = exports.getPosts = void 0;
-const axios_1 = __importDefault(require("axios"));
+const api_1 = __importDefault(require("./api"));
 const getPosts = () => __awaiter(void 0, void 0, void 0, function* () {
-    const response = yield axios_1.default.get('https://jsonplaceholder.typicode.com/posts');
-    return response.data;
+    const localStorageData = localStorage.getItem('user');
+    if (localStorageData !== null) {
+        const currentuser = JSON.parse(localStorageData);
+        const response = yield api_1.default.get('/users/' + currentuser.id + '/posts?_sort=id&_order=desc');
+        return response.data;
+    }
+    return null;
 });
 exports.getPosts = getPosts;
 const getPost = (id) => __awaiter(void 0, void 0, void 0, function* () {
-    const response = yield axios_1.default.get(`https://jsonplaceholder.typicode.com/posts?id=${id}`);
+    const response = yield api_1.default.get(`/posts/${id}`);
     if (response.status == 200) {
         return response.data;
     }
@@ -30,14 +35,16 @@ const getPost = (id) => __awaiter(void 0, void 0, void 0, function* () {
 });
 exports.getPost = getPost;
 const postPost = (post) => __awaiter(void 0, void 0, void 0, function* () {
-    const response = yield axios_1.default.post('https://jsonplaceholder.typicode.com/posts', post);
+    const response = yield api_1.default.post('/posts', post);
+    return response.data;
 });
 exports.postPost = postPost;
 const putPost = (id, post) => __awaiter(void 0, void 0, void 0, function* () {
-    const response = yield axios_1.default.put(`https://jsonplaceholder.typicode.com/posts?id=${id}`, post);
+    const response = yield api_1.default.patch(`/posts/${id}`, post);
+    return response.data;
 });
 exports.putPost = putPost;
 const deletePost = (id) => __awaiter(void 0, void 0, void 0, function* () {
-    const response = yield axios_1.default.delete(`https://jsonplaceholder.typicode.com/posts?id=${id}`);
+    const response = yield api_1.default.delete(`/posts/{id}`);
 });
 exports.deletePost = deletePost;

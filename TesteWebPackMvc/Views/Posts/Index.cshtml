@@ -5,44 +5,45 @@
 <h2 id="titlePageUser">Feed</H2>
 
 <div class="d-flex justify-content-end">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#novopost">
+    <button id="btnAddPost" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#novopost">
         Novo Post
     </button>
 </div>
 
 <br />
 
-<ul id="ulPosts"></ul>
+<ul id="ulPosts" class="feed-ul"></ul>
 
 
 
 
-<div class="modal fade" id="novopost" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="novopost" aria-hidden="true">
+<div class="modal fade" id="novopost" tabindex="-1" data-bs-keyboard="false" aria-labelledby="novopost" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Novo post</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form id="formLogin">
-                    <div class="mb-3">
-                        <label for="title" class="form-label">Título</label>
-                        <input type="text" class="form-control" id="title" placeholder="Título do post">
-                        <div style="font-size: 0.8rem; color: red; margin-left: 5px;"></div>
-                    </div>
+            <form id="formModalPost">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cadastro de post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Título</label>
+                            <input type="text" class="form-control" id="title" placeholder="Título do post">
+                            <div style="font-size: 0.8rem; color: red; margin-left: 5px;"></div>
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="body" class="form-label">Conteúdo</label>
-                        <textarea rows="4" class="form-control" id="body"></textarea>
-                        <div style="font-size: 0.8rem; color: red; margin-left: 5px;"></div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Salvar</button>
-            </div>
+                        <div class="mb-3">
+                            <label for="body" class="form-label">Conteúdo</label>
+                            <textarea rows="4" class="form-control" id="body"></textarea>
+                            <div style="font-size: 0.8rem; color: red; margin-left: 5px;"></div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal"><span id="spinner" aria-hidden="true"></span>Salvar</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
+

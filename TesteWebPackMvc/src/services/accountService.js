@@ -13,15 +13,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getUser = exports.getUsers = void 0;
-const axios_1 = __importDefault(require("axios"));
+const api_1 = __importDefault(require("./api"));
 const getUsers = () => __awaiter(void 0, void 0, void 0, function* () {
-    const response = yield axios_1.default.get('https://jsonplaceholder.typicode.com/users');
+    const response = yield api_1.default.get('/users');
     return response.data;
 });
 exports.getUsers = getUsers;
 const getUser = (email, username) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
-    const response = yield axios_1.default.get(`https://jsonplaceholder.typicode.com/users?email=${email}`);
+    const response = yield api_1.default.get(`/users?email=${email}`);
     if (((_a = response.data[0]) === null || _a === void 0 ? void 0 : _a.username) == username) {
         return response.data[0];
     }

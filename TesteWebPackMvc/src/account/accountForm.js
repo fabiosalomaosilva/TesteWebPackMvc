@@ -23,15 +23,17 @@ const UserSchema = zod_1.z.object({
     email: zod_1.z.string().nonempty('E-mail � obrigat�rio').email('Formato de e-mail inv�lido'),
 });
 document.addEventListener('DOMContentLoaded', () => {
-    formLogin.addEventListener('submit', (event) => __awaiter(void 0, void 0, void 0, function* () {
-        event.preventDefault();
-        yield login();
-    }));
-    inputs.forEach((input) => {
-        input.addEventListener('blur', () => {
-            validarCampos();
+    if (window.location.pathname.toLocaleLowerCase() === '/auth') {
+        formLogin.addEventListener('submit', (event) => __awaiter(void 0, void 0, void 0, function* () {
+            event.preventDefault();
+            yield login();
+        }));
+        inputs.forEach((input) => {
+            input.addEventListener('blur', () => {
+                validarCampos();
+            });
         });
-    });
+    }
 });
 const login = () => __awaiter(void 0, void 0, void 0, function* () {
     isDirty = true;

@@ -13,8 +13,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/bootstrap": "^5.2.6",
-    "@types/feather-icons": "^4.29.1",
     "axios": "^1.4.0",
     "rxjs": "^7.8.1",
     "ts-loader": "^9.4.4",
@@ -22,11 +20,8 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "zod": "^3.22.0"
+    "json-server": "^0.17.3"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.4.2",
-    "bootstrap": "^5.3.1",
-    "feather-icons": "^4.29.0",
-    "json-server": "^0.17.3"
   }
 }
